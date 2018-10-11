@@ -1,4 +1,5 @@
 import requests
+from constants import AppConstants
 
 class Quotes:
     URL = AppConstants.URL

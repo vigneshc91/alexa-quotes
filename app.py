@@ -15,14 +15,15 @@ def index():
     return 'welcome to Qutes for the day'
 
 @ask.launch
-def launched():
+@ask.intent('quotes')
+def quotes():
     info = quoteObj.info()
     text = render_template('quote_not_found')
 
     if not isinstance(info, dict):
         return statement(text)
     text = info['quote']
-
+    
     return statement(text).simple_card(
         title=info['author'],
         content=info['quote']
