@@ -12,7 +12,7 @@ quoteObj = Quotes()
 
 @app.route('/')
 def index():
-    return 'welcome to Qutes for the day'
+    return 'welcome to Quotes for the day'
 
 @ask.launch
 @ask.intent('quotes')
